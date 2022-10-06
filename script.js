@@ -99,8 +99,10 @@ function agregarProductosAlCarrito(id){
         productoEnCarrito.cantidad++;
 
         console.log(carrito);
-
-        alert(`La cantidad del producto ${producto.nombre} fue modificada`);
+        Toastify({
+            text: `La cantidad del producto "${producto.nombre}" fue modificada`,
+            duration: 3000
+        }).showToast();
 
     }else {
         
@@ -110,7 +112,10 @@ function agregarProductosAlCarrito(id){
 
         console.log(carrito);
 
-        alert('Producto agregado correctamente al carrito')
+        Toastify({
+            text: `"${producto.nombre}" agregado correctamente al carrito`,
+            duration: 3000
+        }).showToast();
     }
     renderizarCarrito();
     calcularTotal();
@@ -157,16 +162,36 @@ function renderizarCarrito(){
 
 
 function eliminarProducto(index){
+    Swal.fire({
+        title: '¿Esta seguro?',
+        text: `Va a eliminar el producto ${carrito[index].nombre}`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            carrito[index].cantidad--;
+            if(carrito[index].cantidad === 0){
 
-    carrito[index].cantidad--;
-    alert(`La cantidad del producto ${carrito[index].nombre} disminuyo`);
-
-    if(carrito[index].cantidad === 0){
-
-        carrito.splice(index,1);
-        alert('El producto fue eliminado del carrito');
-    }
-
+                carrito.splice(index,1);
+                Swal.fire(                
+                    'Eliminado!',
+                    'El producto ha sido eliminado',
+                    'success'
+                )
+            }else{
+                Swal.fire(
+                    'Eliminado',
+                    'La cantidad del producto disminuyó',
+                    'success'
+                )
+            }
+        }
+        renderizarCarrito();
+    })
     renderizarCarrito();
     calcularTotal()
 };
