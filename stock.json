@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "categoria": "Combos PS5",
+        "nombre": "PlayStation 5 Standart 825gb + 2 Joysticks + Juego físico de regalo",
+        "precio": 300000,
+        "img": "./assets/img/ps5-2joy-1juego.jpeg",
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "categoria": "Combos PS5",
+        "nombre": "PlayStation 5 Digital 825gb + Joystick",
+        "precio": 280000,
+        "img": "./assets/img/ps5-1joy.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "categoria": "Combos PS5",
+        "nombre": "PlayStation 5 Digital 825gb",
+        "precio": 270000,
+        "img": "./assets/img/ps5-digital.JPG",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "categoria": "Accesorios",
+        "nombre": "Joystick DualSense (color a elección)",
+        "precio": 15000,
+        "img": "./assets/img/1joy.JPG",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "categoria": "Accesorios",
+        "nombre": "2 Joystick DualSense (color a elección)",
+        "precio": 28000,
+        "img": "./assets/img/2joy.png",
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "categoria": "Accesorios",
+        "nombre": "Auriculares PS5 Sony Pulse 3D",
+        "precio": 60000,
+        "img": "./assets/img/auris.jpeg",
+        "cantidad": 1
+    }
+]
