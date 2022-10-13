@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezequielaragon/proyectoJS-Aragon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezequielaragon/proyectoJS-Aragon/issues"
+  },
+  "homepage": "https://github.com/ezequielaragon/proyectoJS-Aragon#readme",
+  "dependencies": {
+    "sweetalert2": "^11.5.0"
+  }
+}
